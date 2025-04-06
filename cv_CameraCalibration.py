@@ -58,7 +58,7 @@ if len(video_images) > 0:
     height, width = video_images[0].shape[:2]
     out_video = cv.VideoWriter("undistorted_video.avi", fourcc, 30.0, (width, height))
     
-    # 💾 왜곡 보정된 프레임 저장
+    # 왜곡 보정된 프레임 저장
     for i, img in enumerate(video_images):
         undistorted = cv.undistort(img, K, dist_coeffs)
 
